@@ -72,3 +72,28 @@ hold off
 ylabel('displacement (um)')
 xlabel('time (min)')
 legend('PTV','QPV',Location='NorthWest')
+
+%%
+%plot particle subimages
+c = 1; %which particle to look at (1:3)
+frames = [1, round(stopFrame(c)/2), stopFrame(c)]; %define the three frames to plot
+
+%beginning of plotting section
+figure(3)
+for sub = 1:3 %display 3 subplots
+    subplot(1, 3, sub)
+    framenum = frames(sub);
+    imagesc(Abkg_stored2(:,:,framenum))
+    axis image
+    hold on;
+
+    xSC = MTX(c,framenum) - window /2; %starting corner
+    ySC = MTY(c,framenum) - window /2;
+    xEC = MTX(c,framenum) + window /2; %ending corner
+    yEC = MTY(c,framenum) + window /2;
+    axis([xSC xEC ySC yEC])
+    axis square
+
+    scalebar(xSC+5,ySC+5,1,scale/1000);
+    text(xSC+5,ySC+3, '1 um')
+end
