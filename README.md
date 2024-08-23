@@ -1,5 +1,7 @@
 # QPV_and_Particle_Tracking
-Code to reproduce figures and analysis comparing QPV to single particle tracking from QPI data
+Code to reproduce figures and analysis comparing QPV to single particle tracking from QPI data.
+
+To accompany "Comparison of automated and manual intracellular particle tracking using quantitative phase imaging" by Alyssa L. Harpring, Soorya Pradeep, and Thomas A. Zangle
 
 Notes for running this repository:
 - Figure number indicated as F1_, F2_, etc. in the file name
