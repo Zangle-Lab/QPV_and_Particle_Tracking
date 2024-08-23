@@ -1,7 +1,7 @@
 %plot tracks on cell images
 clear
 
-load('Data/Step1SetSevenC1.mat')
+load('Data/Step1SetTwoC3.mat')
 stopFrame(1) = 20; %just for ii = 27, to prevent this one from overwhelming the other tracks
 
 scale = 0.21; %micrometers/pixel
@@ -10,6 +10,7 @@ close;
 window = 15; %height and width of interegation window
 
 %beginning of plotting section
+figure(1)
 imagesc(Abkg_stored2(:,:,1))
 hold on;
 grid on;
