@@ -13,7 +13,7 @@ from sklearn.metrics import r2_score
 
 plt.close()
 
-saveLocation =  r"/Data/"
+saveLocation =  r"Data/"
 
 #get all pathLength comparison
 setName = ["SetTwo", "SetThree", "SetTen", "SetSeven", "SetEight", "SetNine", "SetEleven"]
@@ -77,7 +77,6 @@ xLin = np.linspace(0, max(allMdisp))
 yFit = coeff[0]*xLin+coeff[1]
 plt.plot(xLin, yFit, 'k--', label = 'Linear Fit')
 
-# need to be in order?
 model = []
 #get model
 for each in allMdisp:
